@@ -13,12 +13,11 @@ describe Account do
     expect(account.balance).to eq 0
   end
 
-describe '#depositing_funds' do
-
-  it 'will keep records of debit' do
-    expect(account.debit).to eq []
+  it 'will keep records of debits and credits' do
+    expect(account.history).to eq []
   end
 
+describe '#depositing_funds' do
   it 'will respond to a deposit method' do
     expect(account).to respond_to(:deposit).with(1).argument
   end
@@ -30,11 +29,6 @@ describe '#depositing_funds' do
 end
 
 describe '#withdrawing_funds' do
-    
-  it 'will keep records of credit' do
-    expect(account.credit).to eq []
-  end
-
   it 'will respond to a withdraw method' do
     expect(account).to respond_to(:withdraw).with(1).argument
   end
@@ -49,26 +43,26 @@ end
 describe '#print_statement' do
   it 'will print a statement containing one transaction' do
     account.deposit(50)
-    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 50 || 50"
+    expect{ account.print_statement }.to output("   date    || credit || debit || balance\n2021-02-08 ||        ||   50 || 50").to_stdout
   end
 
-  it 'will print a statement containing two transactions on separate lines' do
+  it 'will print a statement with each transaction on separate lines' do
     account.deposit(50)
     account.deposit(20)
-    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
+    expect{ account.print_statement }.to output("   date    || credit || debit || balance\n2021-02-08 ||        ||   20 || 70\n2021-02-08 ||        ||   50 || 50").to_stdout
   end
 
-  it 'will print a statement containing three transactions in reverse chronological order' do
+  it 'will print a statement with transactions in reverse chronological order' do
     account.deposit(50)
     account.deposit(20)
     account.deposit(100)
-    expect(account.print_statement).to eq "   date    || credit || debit || balance\n2021-02-08 ||  || 100 || 170\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
+    expect{ account.print_statement }.to output("   date    || credit || debit || balance\n2021-02-08 ||        ||   100 || 170\n2021-02-08 ||        ||   20 || 70\n2021-02-08 ||        ||   50 || 50").to_stdout
   end
 
   it 'will handle both deposits and withdrawls' do
     account.deposit(50)
     account.withdraw(20)
-    expect(account.print_statement).to eq "   date    || credit || debit || balance\n2021-02-08 || 20       ||  || 30\n2021-02-08 ||       || 50 || 50"
+    expect{ account.print_statement }.to output("   date    || credit || debit || balance\n2021-02-08 ||   20   ||       || 30\n2021-02-08 ||        ||   50 || 50").to_stdout
   end
 end
 end

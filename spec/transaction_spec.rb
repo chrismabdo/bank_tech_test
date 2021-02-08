@@ -28,7 +28,7 @@ describe Transaction do
 
     it 'will add a transaction to debit' do
       account.deposit(50)
-      expect(account.debit.length).to eq 1
+      expect(account.history.length).to eq 1
     end
   end
 
@@ -41,7 +41,7 @@ describe Transaction do
     it 'will add a transaction to credit' do
       account.deposit(50)
       account.withdraw(10)
-      expect(account.credit.length).to eq 1
+      expect(account.history.length).to eq 2
     end
   end
 end

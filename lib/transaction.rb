@@ -8,14 +8,14 @@ class Transaction
 
     def debit(amount)
       add_current_date
-      @log << "       ||   "
+      @log << "     ||   "
       @log << amount
     end
 
     def credit(amount)
       add_current_date
       @log << amount
-      @log << "    ||      "
+      @log << "   ||      "
     end
 
 private

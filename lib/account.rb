@@ -29,7 +29,7 @@ class Account
   end
 
   def print_statement
-    result = debit.map do |t| 
+    result = debit.reverse.map do |t| 
       t[0] + " || " + " || " + t[1].to_s + " || " + t[2].to_s 
     end
 

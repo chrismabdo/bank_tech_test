@@ -55,7 +55,14 @@ describe '#print_statement' do
   it 'will print a statement containing two transactions on separate lines' do
     account.deposit(50)
     account.deposit(20)
-    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 50 || 50\n2021-02-08 ||  || 20 || 70"
+    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
+  end
+
+  it 'will print a statement containing three transactions in reverse chronological order' do
+    account.deposit(50)
+    account.deposit(20)
+    account.deposit(100)
+    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 100 || 170\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
   end
 end
 end

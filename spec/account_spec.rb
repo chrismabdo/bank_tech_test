@@ -46,18 +46,6 @@ describe '#withdrawing_funds' do
   end
 end
 
-#   it 'will contain a date for a deposit or withdrawl' do
-#     date = double("2021-02-08")
-#     allow(account).to receive(:add_current_date).and_return(date)
-#   end
-  
-#   it 'will contain a transaction with three elements: date, amount, balance' do
-#     account.deposit(50)
-#     expect(account.transaction.length).to eq 3
-#   end
 
-  it 'will add a transaction to debit' do
-    
-  end
 
 end

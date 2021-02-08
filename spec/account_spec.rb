@@ -46,6 +46,16 @@ describe '#withdrawing_funds' do
   end
 end
 
+describe '#print_statement' do
+  it 'will print a statement containing one transaction' do
+    account.deposit(50)
+    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 50 || 50"
+  end
 
-
+  it 'will print a statement containing two transactions on separate lines' do
+    account.deposit(50)
+    account.deposit(20)
+    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 50 || 50\n2021-02-08 ||  || 20 || 70"
+  end
+end
 end

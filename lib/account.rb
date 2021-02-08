@@ -28,4 +28,12 @@ class Account
     @credit.push(transaction.log)
   end
 
+  def print_statement
+    result = debit.map do |t| 
+      t[0] + " || " + " || " + t[1].to_s + " || " + t[2].to_s 
+    end
+
+    return "date || credit || debit || balance\n#{result.join("\n")}" 
+    
+  end
 end

@@ -31,4 +31,14 @@ describe Account do
     @account.deposit(50)
     expect(@account.balance).to eq 50
   end
+
+  it 'will respond to a withdraw method' do
+    expect(@account).to respond_to(:withdraw).with(1).argument
+  end
+
+  it 'will withdraw funds from the account, and this will be shown in the balance' do
+    @account.deposit(50)
+    @account.withdraw(10)
+    expect(@account.balance).to eq 40
+  end
 end

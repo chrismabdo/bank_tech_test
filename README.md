@@ -7,7 +7,6 @@
 - Data can be kept in memory (it doesn't need to be stored to a database or anything).
 --------------
 # User Stories
---------------
 As a user
 So that I can add money to my account
 I would like to make a deposit
@@ -21,7 +20,7 @@ So that I can see my current activity
 I would like to print my account statement (date, amount, balance)
 --------------
 Objects/Properties/Messages:
-
+--------------
 Objects (classes):
 - account
 

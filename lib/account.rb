@@ -14,14 +14,18 @@ class Account
 
   def deposit(amount)
     @transaction = Transaction.new
-    @transaction.debit(amount)
+    @transaction.record(amount)
     @balance += amount
     @transaction.log << @balance
     @debit.push(transaction.log)
   end
 
   def withdraw(amount)
+    @transaction = Transaction.new
+    @transaction.record(amount)
     @balance -= amount
+    @transaction.log << @balance
+    @credit.push(transaction.log)
   end
 
 end

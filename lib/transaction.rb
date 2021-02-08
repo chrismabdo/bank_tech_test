@@ -6,9 +6,16 @@ class Transaction
       @log = []
     end
 
-    def record(amount)
+    def debit(amount)
+      add_current_date
+      @log << "       ||   "
+      @log << amount
+    end
+
+    def credit(amount)
       add_current_date
       @log << amount
+      @log << "    ||      "
     end
 
 private

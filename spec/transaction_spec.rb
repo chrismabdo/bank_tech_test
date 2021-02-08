@@ -21,9 +21,9 @@ describe Transaction do
   end
 
   describe '#debit' do
-    it 'will add three elements to the log: date, amount, balance' do
+    it 'will add four elements to the log: date, amount, balance and blank space for credit' do
       account.deposit(50)
-      expect(account.transaction.log.length).to eq 3
+      expect(account.transaction.log.length).to eq 4
     end
 
     it 'will add a transaction to debit' do
@@ -33,9 +33,9 @@ describe Transaction do
   end
 
   describe '#credit' do
-    it 'will add three elements to the log: date, amount, balance' do
+    it 'will add four elements to the log: date, amount, balance and blank space for debit' do
       account.deposit(50)
-      expect(account.transaction.log.length).to eq 3
+      expect(account.transaction.log.length).to eq 4
     end
 
     it 'will add a transaction to credit' do

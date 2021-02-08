@@ -8,32 +8,31 @@ class Account
 
   def initialize
     @balance = 0
-    @credit = []
-    @debit = []
+    @history = []
   end
 
   def deposit(amount)
     @transaction = Transaction.new
-    @transaction.record(amount)
+    @transaction.debit(amount)
     @balance += amount
     @transaction.log << @balance
-    @debit.push(transaction.log)
+    @history.push(transaction.log)
   end
 
   def withdraw(amount)
     @transaction = Transaction.new
-    @transaction.record(amount)
+    @transaction.credit(amount)
     @balance -= amount
     @transaction.log << @balance
-    @credit.push(transaction.log)
+    @history.push(transaction.log)
   end
 
   def print_statement
-    result = debit.reverse.map do |t| 
-      t[0] + " || " + " || " + t[1].to_s + " || " + t[2].to_s 
+    result = @history.reverse.map do |t| 
+      t[0] + " || " + t[1].to_s + t[2].to_s + " || " + t[3].to_s 
     end
 
-    return "date || credit || debit || balance\n#{result.join("\n")}" 
+    print "   date    || credit || debit || balance\n#{result.join("\n")}" 
     
   end
 end

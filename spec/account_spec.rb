@@ -62,7 +62,13 @@ describe '#print_statement' do
     account.deposit(50)
     account.deposit(20)
     account.deposit(100)
-    expect(account.print_statement).to eq "date || credit || debit || balance\n2021-02-08 ||  || 100 || 170\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
+    expect(account.print_statement).to eq "   date    || credit || debit || balance\n2021-02-08 ||  || 100 || 170\n2021-02-08 ||  || 20 || 70\n2021-02-08 ||  || 50 || 50"
+  end
+
+  it 'will handle both deposits and withdrawls' do
+    account.deposit(50)
+    account.withdraw(20)
+    expect(account.print_statement).to eq "   date    || credit || debit || balance\n2021-02-08 || 20       ||  || 30\n2021-02-08 ||       || 50 || 50"
   end
 end
 end

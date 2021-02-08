@@ -3,42 +3,61 @@
 require 'account'
 
 describe Account do
-  before(:each) do
-    @account = Account.new
-  end
+  let(:account) { described_class.new }
 
   it 'will be an instance of Account' do
-    expect(@account).to be_kind_of Account
+    expect(account).to be_kind_of Account
   end
 
   it 'will be initialized with an empty balance' do
-    expect(@account.balance).to eq 0
+    expect(account.balance).to eq 0
   end
 
-  it 'will keep records of credit' do
-    expect(@account.credit).to eq []
-  end
+describe '#depositing_funds' do
 
   it 'will keep records of debit' do
-    expect(@account.debit).to eq []
+    expect(account.debit).to eq []
   end
 
   it 'will respond to a deposit method' do
-    expect(@account).to respond_to(:deposit).with(1).argument
+    expect(account).to respond_to(:deposit).with(1).argument
   end
 
   it 'will deposit funds to the account balance' do
-    @account.deposit(50)
-    expect(@account.balance).to eq 50
+    account.deposit(50)
+    expect(account.balance).to eq 50
+  end
+end
+
+describe '#withdrawing_funds' do
+    
+  it 'will keep records of credit' do
+    expect(account.credit).to eq []
   end
 
   it 'will respond to a withdraw method' do
-    expect(@account).to respond_to(:withdraw).with(1).argument
+    expect(account).to respond_to(:withdraw).with(1).argument
   end
 
   it 'will withdraw funds from the account, and this will be shown in the balance' do
-    @account.deposit(50)
-    @account.withdraw(10)
-    expect(@account.balance).to eq 40
+    account.deposit(50)
+    account.withdraw(10)
+    expect(account.balance).to eq 40
   end
+end
+
+#   it 'will contain a date for a deposit or withdrawl' do
+#     date = double("2021-02-08")
+#     allow(account).to receive(:add_current_date).and_return(date)
+#   end
+  
+#   it 'will contain a transaction with three elements: date, amount, balance' do
+#     account.deposit(50)
+#     expect(account.transaction.length).to eq 3
+#   end
+
+  it 'will add a transaction to debit' do
+    
+  end
+
 end

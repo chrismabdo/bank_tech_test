@@ -51,26 +51,34 @@
           null,
           1,
           1,
-          2,
+          1,
+          1,
           null,
-          null,
-          1,
-          1,
-          1,
-          2,
           null,
           null,
           1,
           1,
           1,
           1,
-          2,
+          1,
           null,
           null,
+          null,
           1,
           1,
           1,
-          2,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -157,6 +165,8 @@
       },
       "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/spec/transaction_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -170,8 +180,6 @@
           null,
           1,
           1,
-          null,
-          null,
           null,
           null,
           1,
@@ -207,6 +215,6 @@
         ]
       }
     },
-    "timestamp": 1612870761
+    "timestamp": 1612873411
   }
 }

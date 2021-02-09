@@ -11,8 +11,8 @@ class Account
     @history = []
   end
 
-  def deposit(amount)
-    @transaction = Transaction.new
+  def deposit(amount, transaction = Transaction.new)
+    @transaction = transaction
     @transaction.debit(amount)
     @balance += amount
     @transaction.log << @balance

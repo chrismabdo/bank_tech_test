@@ -41,6 +41,9 @@ describe '#withdrawing_funds' do
 end
 
 describe '#print_statement' do
+  before(:each) do
+    allow(Date).to receive(:today).and_return Date.new(2021,2,8)
+  end
   it 'will print a statement containing one transaction' do
     account.deposit(50)
     expect{ account.print_statement }.to output("   date    || credit || debit || balance\n2021-02-08 ||        ||   50 || 50").to_stdout

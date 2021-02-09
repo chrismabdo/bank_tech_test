@@ -1,3 +1,5 @@
+# frozen_string_literal: false
+
 require 'transaction'
 require 'account'
 
@@ -13,10 +15,8 @@ describe Transaction do
     expect(transaction.log).to eq []
   end
 
-  
-
   it 'will contain a date for a deposit or withdrawl' do
-    date = double("2021-02-08")
+    date = double('2021-02-08')
     allow(transaction).to receive(:add_current_date).and_return(date)
   end
 

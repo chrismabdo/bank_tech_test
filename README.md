@@ -73,8 +73,8 @@ My plan was to break down the problem into extremely small problems. This is a t
 withdraw and deposit methods, and equally how to test for them. I used irb to ensure that my logic was guiding me down the right path.
 
 Once the Account class became to clunky with transaction instance variables, I extracted this to a separate class and gave my attempt at testing account in isolation.
---------------------
+
 # Below is a screenshot of my working Bank Account application. 
 
-![Alt text](desktop/makers/week_10/bank_app_ss.jpg?raw=true "Bank App")
+![Alt text](images/bank_app_ss.png)
 --------------------

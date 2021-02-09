@@ -5,9 +5,8 @@ require 'date'
 
 # this class holds information pertaining to a users' account, allows deposits, withdrawls and printing statements
 class Account
-  attr_reader :history, :transaction
-  attr_accessor :balance
-
+  attr_reader :history, :transaction, :balance
+  
   def initialize
     @balance = 0
     @history = []

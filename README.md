@@ -76,4 +76,5 @@ Once the Account class became to clunky with transaction instance variables, I e
 --------------------
 # Below is a screenshot of my working Bank Account application. 
 
+![Alt text](desktop/makers/week_10/bank_app_ss.jpg?raw=true "Bank App")
 --------------------

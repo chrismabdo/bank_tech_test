@@ -8,16 +8,16 @@ describe Transaction do
   let(:account) { Account.new }
 
   it 'will be an instance of Transaction' do
-    expect(transaction).to be_kind_of Transaction
+    expect(subject).to be_kind_of Transaction
   end
 
   it 'will create an empty log' do
-    expect(transaction.log).to eq []
+    expect(subject.log).to eq []
   end
 
   it 'will contain a date for a deposit or withdrawl' do
     date = double('2021-02-08')
-    allow(transaction).to receive(:add_current_date).and_return(date)
+    allow(subject).to receive(:add_current_date).and_return(date)
   end
 
   describe '#debit' do

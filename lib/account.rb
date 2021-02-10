@@ -32,8 +32,8 @@ class Account
 
   def print_statement
     result = @history.reverse.map do |t|
-      "#{t[0]} || #{t[1]}#{t[2]} || #{t[3]}"
+      "#{t[0]}||#{t[1]}#{t[2]}||#{t[3]}"
     end
-    print "   date    || credit || debit || balance\n#{result.join("\n")}"
+    print "   date   || credit || debit || balance\n#{result.join("\n")}"
   end
 end

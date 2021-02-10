@@ -12,13 +12,13 @@ class Transaction
 
   def debit(amount)
     add_current_date
-    @log.push('     ||   ', monetary_conversion(amount))
+    @log.push('||', monetary_conversion(amount))
   end
 
   def credit(amount)
     add_current_date
     @log << monetary_conversion(amount)
-    @log << '  ||      '
+    @log << '||'
   end
   # Not ideal adding the whitespaces on lines 13 and 20. Chose to add them for readability in the statement table.
 

@@ -94,7 +94,6 @@
           null,
           1,
           1,
-          1,
           null,
           1,
           15,
@@ -152,8 +151,6 @@
           3,
           3,
           null,
-          3,
-          null,
           null,
           null,
           1,
@@ -166,6 +163,23 @@
           1,
           16,
           null,
+          null
+        ]
+      },
+      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/spec/statement_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/lib/statement.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -221,6 +235,6 @@
         ]
       }
     },
-    "timestamp": 1612877003
+    "timestamp": 1612972515
   }
 }

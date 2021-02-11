@@ -1,6 +1,7 @@
 # frozen_string_literal: false
 
 require 'transaction'
+require 'statement'
 require 'account'
 
 describe Transaction do
@@ -28,7 +29,7 @@ describe Transaction do
 
     it 'will add a transaction to debit' do
       account.deposit(50)
-      expect(account.history.length).to eq 1
+      expect(account.statement.history.length).to eq 1
     end
   end
 
@@ -41,7 +42,7 @@ describe Transaction do
     it 'will add a transaction to credit' do
       account.deposit(50)
       account.withdraw(10)
-      expect(account.history.length).to eq 2
+      expect(account.statement.history.length).to eq 2
     end
   end
 end

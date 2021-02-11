@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/spec/account_spec.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/spec/account_spec.rb": {
         "lines": [
           null,
           null,
@@ -84,7 +84,7 @@
           null
         ]
       },
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/lib/account.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/lib/account.rb": {
         "lines": [
           null,
           null,
@@ -127,7 +127,7 @@
           null
         ]
       },
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/lib/transaction.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/lib/transaction.rb": {
         "lines": [
           null,
           null,
@@ -166,24 +166,33 @@
           null
         ]
       },
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/spec/statement_spec.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/spec/statement_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
           null
         ]
       },
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/lib/statement.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/lib/statement.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
           null
         ]
       },
-      "/Users/chrisabdo/Desktop/Makers/week_10/bank_tech_test/spec/transaction_spec.rb": {
+      "/Users/chrisabdo/Desktop/Makers/Week_10/bank_tech_test/spec/transaction_spec.rb": {
         "lines": [
           null,
           null,
@@ -235,6 +244,6 @@
         ]
       }
     },
-    "timestamp": 1612972837
+    "timestamp": 1613055668
   }
 }

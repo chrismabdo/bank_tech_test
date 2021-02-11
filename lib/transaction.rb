@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 require_relative './account'
 require_relative './statement'
 require 'date'

@@ -13,7 +13,6 @@ describe Account do
     expect(subject.balance).to eq 0
   end
 
-
   describe '#depositing_funds' do
     it 'will respond to a deposit method' do
       expect(subject).to respond_to(:deposit).with(1).argument

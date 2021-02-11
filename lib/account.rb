@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 require_relative './statement'
 require_relative './transaction'
 require 'date'
@@ -7,7 +8,7 @@ require 'date'
 class Account
   attr_reader :history, :transaction, :balance
   attr_accessor :statement
-  
+
   def initialize(statement = Statement.new)
     @balance = 0
     @statement = statement

@@ -1,6 +1,6 @@
 # bank_tech_test
 --------------
-# Instructions for running the project, dependencies and tests:
+# Instructions for running the project and it's tests:
 
 - run 'bundle install' from the command line
 - The project can be functionally run in any repl such as irb.

@@ -1,6 +1,9 @@
+# frozen_string_literal: false
+
 require_relative './account'
 require_relative './transaction'
 
+# This class is responsible for printing the user's account history in a formatted statement
 class Statement
   attr_accessor :history
 

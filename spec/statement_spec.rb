@@ -33,7 +33,8 @@ describe Statement do
       account.deposit(20)
       expect do
         account.print_statement
-      end.to output("   date   || credit || debit || balance\n2021-02-08||||20.00||70.00\n2021-02-08||||50.00||50.00").to_stdout
+      end.to output("   date   || credit || debit || balance
+2021-02-08||||20.00||70.00\n2021-02-08||||50.00||50.00").to_stdout
     end
 
     it 'will print a statement with transactions in reverse chronological order' do
@@ -42,7 +43,9 @@ describe Statement do
       account.deposit(100)
       expect do
         account.print_statement
-      end.to output("   date   || credit || debit || balance\n2021-02-08||||100.00||170.00\n2021-02-08||||20.00||70.00\n2021-02-08||||50.00||50.00").to_stdout
+      end.to output("   date   || credit || debit || balance
+2021-02-08||||100.00||170.00\n2021-02-08||||20.00||70.00
+2021-02-08||||50.00||50.00").to_stdout
     end
 
     it 'will handle both deposits and withdrawls' do
@@ -50,7 +53,9 @@ describe Statement do
       account.withdraw(20)
       expect do
         account.print_statement
-      end.to output("   date   || credit || debit || balance\n2021-02-08||20.00||||30.00\n2021-02-08||||50.00||50.00").to_stdout
+      end.to output("   date   || credit || debit || balance
+2021-02-08||20.00||||30.00
+2021-02-08||||50.00||50.00").to_stdout
     end
   end
 end

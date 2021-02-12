@@ -14,10 +14,6 @@ describe Account do
   end
 
   describe '#depositing_funds' do
-    it 'will respond to a deposit method' do
-      expect(subject).to respond_to(:deposit).with(1).argument
-    end
-
     it 'will deposit funds to the account balance' do
       subject.deposit(50)
       expect(subject.balance).to eq 50

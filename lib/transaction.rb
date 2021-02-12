@@ -21,7 +21,6 @@ class Transaction
     add_current_date
     @log.push(monetary_conversion(amount), '||')
   end
-  # Not ideal adding the whitespaces on lines 13 and 20. Chose to add them for readability in the statement table.
 
   private
 

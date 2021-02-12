@@ -12,7 +12,6 @@ class Account
   def initialize(statement = Statement.new)
     @balance = 0
     @statement = statement
-    # @statement.history = []
   end
 
   # Trying to withdraw the dependency of Account on Transaction
